@@ -1,7 +1,6 @@
 import { useEffect, useState } from 'react';
 import { Outlet, useLocation } from 'react-router-dom';
 import { Footer } from './Footer';
-import { Header } from './Header';
 
 export function Applayout() {
     const location = useLocation();
@@ -18,9 +17,9 @@ export function Applayout() {
 
     return (
         <>
-            <Header />
+            {/* <Header /> */}
             <div className="flex flex-grow flex-col">
-                <div className="container relative flex flex-grow flex-col overflow-hidden px-4 md:px-8">
+                <div className="relative container flex flex-grow flex-col overflow-hidden px-0 md:px-8">
                     <Outlet />
                 </div>
             </div>

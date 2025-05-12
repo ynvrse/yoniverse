@@ -3,6 +3,7 @@ import useStellaryst from '@/hooks/useStellaryst';
 import { cn } from '@/lib/utils';
 import { useEffect } from 'react';
 import { NavLink, useLocation } from 'react-router-dom';
+import { ModeToggle } from '../mode-toggle';
 
 export function Footer() {
     const { stellaryst, fetchStellaryst } = useStellaryst();
@@ -62,6 +63,7 @@ export function Footer() {
                                 )}
                             </NavLink>
                         ))}
+                        <ModeToggle />
                     </nav>
                 </div>
             </div>

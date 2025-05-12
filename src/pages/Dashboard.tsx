@@ -10,7 +10,12 @@ export default function Dashboard() {
     return (
         <>
             <PageHeader>
-                <PageHeaderHeading className="flex w-full justify-between">Dashboard</PageHeaderHeading>
+                <PageHeaderHeading className="-mt-6 flex w-full justify-end text-9xl font-bold">DION</PageHeaderHeading>
+            </PageHeader>
+            <PageHeader>
+                <PageHeaderHeading className="-mt-12 flex w-full justify-start text-4xl">
+                    SOFTWARE ENGINEER
+                </PageHeaderHeading>
             </PageHeader>
             <Card>
                 <CardHeader>
