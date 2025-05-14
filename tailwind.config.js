@@ -17,6 +17,9 @@ module.exports = {
             },
         },
         extend: {
+            fontFamily: {
+                newspaper: ['UnifrakturCook', 'cursive'],
+            },
             colors: {
                 border: 'hsl(var(--border))',
                 input: 'hsl(var(--input))',

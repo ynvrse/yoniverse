@@ -22,7 +22,7 @@
 @layer base {
     :root {
         /* Nuansa Retro dengan Latar Putih Khas */
-        --background: 0 0% 100%; /* Putih Bersih */
+        --background: 32 13%, 74%; /* Putih Bersih */
         --foreground: 220 15% 15%; /* Abu Gelap */
 
         --card: 0 0% 100%; /* Putih Bersih */
@@ -32,7 +32,7 @@
         --popover-foreground: 220 15% 15%;
 
         /* Warna Utama Retro: Hijau Mint Kustom (#6E9380) */
-        --primary: 149 15% 50%; /* HSL dari #6E9380 */
+        --primary: 220 15% 15%; /* HSL dari #6E9380 */
         --primary-foreground: 0 0% 100%;
 
         /* Warna Sekunder Retro */

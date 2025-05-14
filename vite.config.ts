@@ -49,5 +49,7 @@ export default defineConfig(({ command }) => {
                 basename: isProd ? basenameProd : '',
             },
         },
+
+        assetsInclude: ['**/*.glb'],
     };
 });

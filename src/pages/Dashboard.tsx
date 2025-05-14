@@ -1,5 +1,6 @@
 import { PageHeader, PageHeaderHeading } from '@/components/page-header';
 
+import Lanyard from '@/components/Lanyard';
 import LoadingScreen from '@/components/LoadingScreen';
 import { Card, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import useAppConfig from '@/hooks/useStellaryst';
@@ -17,6 +18,7 @@ export default function Dashboard() {
                     SOFTWARE ENGINEER
                 </PageHeaderHeading>
             </PageHeader>
+
             <Card>
                 <CardHeader>
                     <CardTitle className="leading-relaxed">
@@ -29,6 +31,7 @@ export default function Dashboard() {
                     </CardDescription>
                 </CardHeader>
             </Card>
+            <Lanyard />
         </>
     );
 }

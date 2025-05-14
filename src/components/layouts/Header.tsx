@@ -5,9 +5,9 @@ import { sidebarMenu } from '@/config/sidebar-menu';
 import useAppConfig from '@/hooks/useStellaryst';
 import { cn } from '@/lib/utils';
 import { ScrollArea } from '@radix-ui/react-scroll-area';
+import { TableOfContents } from 'lucide-react';
 import { useEffect, useState } from 'react';
 import { NavLink, useLocation } from 'react-router-dom';
-import { ModeToggle } from '../mode-toggle';
 
 export function Header() {
     const { stellaryst, fetchStellaryst } = useAppConfig();
@@ -21,19 +21,29 @@ export function Header() {
     }, [location]);
 
     return (
-        <header className="supports-backdrop-blur:bg-background/60 bg-background/90 sticky top-0 z-50 w-full border-b backdrop-blur">
-            <div className="container flex h-14 items-center px-4 md:px-8">
-                {/* sideBar */}
+        <header className="supports-backdrop-blur:bg-background/60 bg-background/90 sticky top-0 z-50 w-full border-b border-gray-500 backdrop-blur">
+            <div className="relative container flex h-14 items-center justify-between px-2 md:px-8">
+                {/* Left */}
+                <div className="flex items-center space-x-1">
+                    {/* <Icons.logo className="h-10 w-10" /> */}
+                    <span className="inline-block text-sm text-black md:font-bold dark:text-white">Kotabaru, IDN</span>
+                </div>
+
+                {/* Center */}
+                <div className="font-newspaper absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-xl md:text-2xl">
+                    The Portfolio
+                </div>
+
+                {/* Right */}
+                {/* right */}
+
                 <Sheet open={open} onOpenChange={setOpen}>
                     <SheetTrigger asChild>
-                        <div className="mr-6 flex items-center space-x-1">
-                            <Icons.logo className="h-10 w-10" />
-                            <span className="dark:text-accent text-primary inline-block text-lg font-bold">
-                                {stellaryst?.appName}
-                            </span>
+                        <div className="flex items-center justify-end">
+                            <TableOfContents />
                         </div>
                     </SheetTrigger>
-                    <SheetContent side="left" className="pr-0 sm:max-w-xs">
+                    <SheetContent side="right" className="pr-0 sm:max-w-xs">
                         <div onClick={() => setOpen(false)} className="flex items-center space-x-1">
                             <Icons.logo className="h-10 w-10" />
                             <span className="dark:text-accent text-primary inline-block font-bold">
@@ -125,13 +135,6 @@ export function Header() {
                         </ScrollArea>
                     </SheetContent>
                 </Sheet>
-
-                {/* right */}
-                <div className="flex flex-1 items-center justify-end space-x-2">
-                    <nav>
-                        <ModeToggle />
-                    </nav>
-                </div>
             </div>
         </header>
     );
